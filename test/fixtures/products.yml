@@ -11,3 +11,12 @@ two:
   description: MyText
   image_url: 7apps.jpg
   price: 9.99
+
+ruby:
+  title:              Programming Ruby 1.9
+  description:
+    Ruby is the fasting growing and most exciting dynamic
+    language out there. If you need to get working programs
+    delivery fast, you should add ruby to your tooldbox.
+  price: 49.50
+  image_url: rails.png
