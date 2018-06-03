@@ -21,8 +21,10 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
 
-    assert_select 'h2', 'Your Pragmatic Cart'
-    assert_select 'div#main li', "1 \u00D7 #{products(:ruby).title}"
+    assert_select 'h2', 'Your Cart'
+    assert_select 'td', "1 \u00D7"
+    assert_select 'td', products(:ruby).title
+    assert_select 'td.item_price', '$' + format('%.2f', products(:ruby).price)
   end
 
   test "should show line_item" do
