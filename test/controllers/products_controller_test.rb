@@ -29,6 +29,12 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to product_url(Product.last)
   end
 
+  test "should not allow duplicate products" do
+    assert_no_difference('Product.count') do
+      post products_url, params: { product: Product.first.attributes }
+    end
+  end
+
   test "should show product" do
     get product_url(@product)
     assert_response :success
