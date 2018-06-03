@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20180603141836) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
-    t.integer "product_price"
+    t.decimal "product_price", precision: 8, scale: 2
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
     t.index ["product_id"], name: "index_line_items_on_product_id"
   end

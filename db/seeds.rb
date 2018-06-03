@@ -23,7 +23,7 @@ Product.create!(title: 'Rails, Angular, Postgres, and Bootstrap',
       environment.
       </p>),
                 image_url: 'dcbang.jpg',
-                price: 45.00)
+                price: 45.55)
 # . . .
 Product.create!(title: 'Seven Mobile Apps in Seven Weeks',
                 description:
